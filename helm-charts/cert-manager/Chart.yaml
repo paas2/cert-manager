@@ -1,21 +1,29 @@
-apiVersion: v1
-name: cert-manager
-# The version and appVersion fields are set automatically by the release tool
-version: v0.1.0
-appVersion: v0.1.0
-kubeVersion: ">= 1.19.0-0"
-description: A Helm chart for cert-manager
-home: https://github.com/cert-manager/cert-manager
-icon: https://raw.githubusercontent.com/cert-manager/cert-manager/master/logo/logo.png
-keywords:
-  - cert-manager
-  - kube-lego
-  - letsencrypt
-  - tls
-sources:
-  - https://github.com/cert-manager/cert-manager
-maintainers:
-  - name: cert-manager-maintainers
-    email: cert-manager-maintainers@googlegroups.com
 annotations:
-  artifacthub.io/prerelease: "{{IS_PRERELEASE}}"
+  category: CertificateAuthority
+apiVersion: v2
+appVersion: 1.8.0
+dependencies:
+  - name: common
+    repository: https://charts.bitnami.com/bitnami
+    tags:
+      - bitnami-common
+    version: 1.x.x
+description: Cert Manager is a Kubernetes add-on to automate the management and issuance of TLS certificates from various issuing sources.
+engine: gotpl
+home: https://github.com/jetstack/cert-manager
+icon: https://bitnami.com/assets/stacks/cert-manager/img/cert-manager-stack-220x234.png
+keywords:
+  - go
+  - security
+  - tls
+  - certificate
+maintainers:
+  - name: Bitnami
+    url: https://github.com/bitnami/charts
+name: cert-manager
+sources:
+  - https://github.com/bitnami/bitnami-docker-cert-manager
+  - https://github.com/bitnami/bitnami-docker-cert-manager-webhook
+  - https://github.com/bitnami/bitnami-docker-cainjector
+  - https://github.com/jetstack/cert-manager
+version: 0.5.6

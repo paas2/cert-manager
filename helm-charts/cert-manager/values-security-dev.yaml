@@ -1,3 +1,1 @@
-global:
-  leaderElection:
-    namespace: "cert-manager"
+# ---- #
